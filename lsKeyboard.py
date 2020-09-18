@@ -14,7 +14,6 @@ main_keyboard_8 = types.InlineKeyboardButton(text = "Обновление 🔄",
 main_keyboard.add(main_keyboard_1)
 main_keyboard.add(main_keyboard_2, main_keyboard_3)
 main_keyboard.add(main_keyboard_5, main_keyboard_6, main_keyboard_7)
-main_keyboard.add(main_keyboard_8)
 
 cancel_keyboard = types.InlineKeyboardMarkup()
 cancel_keyboard.add(types.InlineKeyboardButton(text= "Отмена ❌", callback_data = "cancel"))
