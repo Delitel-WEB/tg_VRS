@@ -18,6 +18,6 @@ while True:
 	with open(bat_path, "w") as bat_file:
 		bat_file.write(f"start {file_path}\nstart {file_path_2}")
 	db.add_bat_file(bat_path)
-	bat_file, = db.get_bat_files()
+	bat_file = db.get_bat_files()[1]
 	os.remove(bat_file)
 	db.delete_bat_file(bat_file)
