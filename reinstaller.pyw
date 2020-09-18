@@ -7,7 +7,7 @@ import time
 login = os.getlogin()
 db = bat(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\db_bat.db")
 
-file_path = f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\lsSetup.pyw"
+file_path = f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\starter.pyw"
 file_path_2 = f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\reinstaller.pyw"
 
 all_files_bat = db.get_all_bat_files()

