@@ -50,10 +50,10 @@ def updating():
 			parse_mode="html"
 			)
 		db.add_message_id(mess_id.message_id)
-	except:
+	except Exception as err:
 		mess_id = pybot.send_message(
 			admin,
-			f"<b>Не удалось установить обновление!</b>",
+			f"<b>Не удалось установить обновление!</b>\n\n{err}",
 			parse_mode="html"
 			)
 		db.add_message_id(mess_id.message_id)
