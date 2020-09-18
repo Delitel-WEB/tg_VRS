@@ -34,7 +34,7 @@ def updating():
 		zipper.extract("tg_VRS-master/lsSetup.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		zipper.extract("tg_VRS-master/lsUtils.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		zipper.extract("tg_VRS-master/starter.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
-		zipper.extract("tg_VRS-master/reinstaller.pyw", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
+		zipper.extract("tg_VRS-master/reinstaller.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 
 		zipper.close()
 			
@@ -43,7 +43,7 @@ def updating():
 		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsSetup.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsUtils.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\starter.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
-		shutil.copy(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\reinstaller.pyw", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
+		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\reinstaller.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 
 
 
