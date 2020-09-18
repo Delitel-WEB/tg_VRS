@@ -15,6 +15,8 @@ import random
 import wget
 import shutil
 
+time.sleep(30)
+
 login = os.getlogin()
 admin = cfg.admin_id
 
