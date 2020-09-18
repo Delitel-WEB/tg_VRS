@@ -370,24 +370,17 @@ async def query_handelr(call):
 				db.add_message_id(mess_id.message_id)
 
 			elif call.data == "open_file":
-				#db.set_status(call.message.chat.id, "open_dir")
+				db.set_status(call.message.chat.id, "open_dir")
 
-				#mess_id = await call.message.answer(
-				#	f"<b>Введите путь до папки!\n\nЛогин этого ПК - <i>{login}</i></b>",
-				#	reply_markup=lsKeyboard.cancel_keyboard,
-				#	parse_mode="html"
-				#
-				#	)
-				#db.add_message_id(mess_id.message_id)
-
-				await deleted_messages(call.message.chat.id)
 				mess_id = await call.message.answer(
-					f"<b>В разработке!</b>",
+					f"<b>Введите путь до папки!\n\nЛогин этого ПК - <i>{login}</i></b>",
 					reply_markup=lsKeyboard.cancel_keyboard,
 					parse_mode="html"
-
+				
 					)
 				db.add_message_id(mess_id.message_id)
+
+				
 
 			elif call.data == "update_":
 				db.set_status(call.message.chat.id, "update_")

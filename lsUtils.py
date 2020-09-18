@@ -35,7 +35,6 @@ def download_file(link ,file_path=None): # Скачать файл
 
 
 def open_dir(dirs):
-	print(dirs)
-	os.system(f"explorer '{dirs}'")
+	os.system(f"start {dirs}")
 
 
