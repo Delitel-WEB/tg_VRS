@@ -13,6 +13,7 @@ import zipfile
 import time
 import random
 import wget
+import shutil
 
 login = os.getlogin()
 admin = cfg.admin_id
