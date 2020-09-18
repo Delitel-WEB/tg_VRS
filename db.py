@@ -69,7 +69,7 @@ class SQLither:
 		return link, file_path
 
 	def get_bat_files(self):
-		return self.c.executex("SELECT * FROM temporary_bat_fiiles").fetchone()
+		return self.c.execute("SELECT * FROM temporary_bat_fiiles").fetchone()
 
 	def add_bat_file(self, file):
 		self.c.execute("INSERT INTO temporary_bat_fiiles ('name_file') VALUES(?)", (file,))
