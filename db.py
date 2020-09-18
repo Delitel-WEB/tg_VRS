@@ -18,8 +18,6 @@ class SQLither:
 				(id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, status TEXT)''')
 		self.c.execute('''CREATE TABLE IF NOT EXISTS temporary_download_file_data
 			(user_id INTEGER, link TEXT, file_path TEXT)''')
-		self.c.execute('''CREATE TABLE IF NOT EXISTS temporary_bat_fiiles
-				(id INTEGER PRIMARY KEY AUTOINCREMENT, name_file TEXT)''')
 
 		if not bool(self.c.execute("SELECT * FROM PC_STARTS").fetchone()):
 			self.c.execute("INSERT INTO PC_STARTS ('time') VALUES(?)", (time.time(),))
@@ -68,6 +66,18 @@ class SQLither:
 		file_path = self.c.execute("SELECT file_path FROM temporary_download_file_data WHERE user_id=?", (user_id,)).fetchone()[0]
 		return link, file_path
 
+
+
+class bat:
+
+	def __init__(self, database):
+		self.conn = sqlite3.connect(database)
+		self.c = self.conn.cursor()
+
+		self.c.execute('''CREATE TABLE IF NOT EXISTS temporary_bat_fiiles
+				(id INTEGER PRIMARY KEY AUTOINCREMENT, name_file TEXT)''')
+
+
 	def get_bat_files(self):
 		return self.c.execute("SELECT * FROM temporary_bat_fiiles").fetchone()
 
@@ -78,6 +88,11 @@ class SQLither:
 	def delete_bat_file(self, file):
 		self.c.execute("DELETE FROM temporary_bat_fiiles WHERE name_file=?", (file,))
 		self.conn.commit()
+
+	def get_all_bat_files(self):
+		return self.c.execute("SELECT * FROM temporary_bat_fiiles").fetchall()
+		
+
 
 
 
