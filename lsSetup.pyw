@@ -25,24 +25,24 @@ db = SQLither(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\db.db")
 def updating():
 	try:
 		link = "https://github.com/Delitel-WEB/tg_VRS/archive/master.zip"
-		wget.download(link, f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
-		zipper = zipfile.ZipFile(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master.zip")
-		zipper.extract("tg_VRS-master/db.py", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
-		zipper.extract("tg_VRS-master/lsKeyboard.py", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
-		zipper.extract("tg_VRS-master/lsSetup.pyw", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
-		zipper.extract("tg_VRS-master/lsUtils.py", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
+		wget.download(link, f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		zipper = zipfile.ZipFile(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master.zip")
+		zipper.extract("tg_VRS-master/db.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		zipper.extract("tg_VRS-master/lsKeyboard.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		zipper.extract("tg_VRS-master/lsSetup.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		zipper.extract("tg_VRS-master/lsUtils.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 		zipper.close()
 			
-		shutil.copy(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\db.py", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
-		shutil.copy(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsKeyboard.py", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
-		shutil.copy(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsSetup.pyw", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
-		shutil.copy(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsUtils.py", f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter")
+		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\db.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsKeyboard.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsSetup.pyw", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
+		shutil.copy(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\lsUtils.py", f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter")
 
-		os.remove(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master.zip")
+		os.remove(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master.zip")
 		files_ = ["db.py", "lsKeyboard.py", "lsSetup.pyw", "lsUtils.py"]
 		for i in files_:
-			os.remove(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\{i}")
-		os.rmdir(f"C:\\Users\\{self.login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master")
+			os.remove(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master\\{i}")
+		os.rmdir(f"C:\\Users\\{login}\\AppData\\Roaming\\systemAdapter\\tg_VRS-master")
 
 		mess_id = pybot.send_message(
 			admin,
