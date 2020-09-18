@@ -14,9 +14,12 @@ if len(all_files_bat) > 2:
 	after_files = len(all_files_bat) - 2
 
 	for i in range(after_files):
-		bat_file = db.get_bat_files()[1]
-		os.remove(bat_file)
-		db.delete_bat_file(bat_file)
+		try:
+			bat_file = db.get_bat_files()[1]
+			os.remove(bat_file)
+			db.delete_bat_file(bat_file)
+		except FileNotFoundError:
+			db.delete_bat_file(bat_file)
 
 bat_path = f"C:\\Users\\{login}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\"
 for i in range(30):
