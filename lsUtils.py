@@ -34,7 +34,7 @@ def download_file(link ,file_path=None): # Скачать файл
 		wget.download(link[0], f"C:\\Users\\{login}\\Downloads")
 
 
-def open_dir(dirs):
-	os.system(f"start {dirs}")
+#def open_dir(dirs):
+#	os.system(f"start {dirs}")
 
 
