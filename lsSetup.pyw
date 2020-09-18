@@ -47,16 +47,14 @@ def updating():
 		mess_id = pybot.send_message(
 			admin,
 			f"<b>Обновление установлено!</b>",
-			parse_mode="html",
-			reply_markup=keyboard
+			parse_mode="html"
 			)
 		db.add_message_id(mess_id.message_id)
 	except:
 		mess_id = pybot.send_message(
 			admin,
 			f"<b>Не удалось установить обновление!</b>",
-			parse_mode="html",
-			reply_markup=keyboard
+			parse_mode="html"
 			)
 		db.add_message_id(mess_id.message_id)
 
